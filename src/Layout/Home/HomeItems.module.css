@@ -1,0 +1,21 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 30px;
+  padding: 10px;
+}
+.bgDiv {
+  background-color: black;
+}
+.container div {
+  background-color: rgba(165, 165, 165, 0.8);
+  box-shadow: 4px 4px 4px 4px rgb(137, 137, 137);
+  border-radius: 15px;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+  /*border-style: solid;
+  border: 4;
+  border-color: black;
+   */
+}

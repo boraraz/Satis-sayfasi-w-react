@@ -1,0 +1,25 @@
+li {
+  display: inline;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+ul {
+  background-color: rgb(171, 171, 171);
+  padding: 15px;
+  margin: 0;
+}
+
+.headerDiv {
+  background-color: rgb(71, 71, 71);
+  color: aliceblue;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.right {
+  float: right;
+}
