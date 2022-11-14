@@ -3,8 +3,8 @@ import classes from "./Log.module.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 
-function LoggedOut(props) {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+function Log(props) {
+  const [isLoggedIn /*, setIsLoggedIn*/] = useState(true);
 
   if (isLoggedIn === false) {
     return (
@@ -13,8 +13,9 @@ function LoggedOut(props) {
         <li className={classes.right}>
           <Link to="/signInBody">Log In</Link>
         </li>
-        <li className={classes.right}>Sign Up</li>
-        <li className={classes.right}>Cart</li>
+        <li className={classes.right}>
+          <Link to="/signUpBody">Sign Up</Link>
+        </li>
       </ul>
     );
   } else {
@@ -23,10 +24,12 @@ function LoggedOut(props) {
         <li>{props.children}</li>
         <li className={classes.right}>Account</li>
         <li className={classes.right}>Hello User</li>
-        <li className={classes.right}>Cart</li>
+        <li className={classes.right}>
+          <Link to="cartBody">Cart</Link>
+        </li>
       </ul>
     );
   }
 }
 
-export default LoggedOut;
+export default Log;

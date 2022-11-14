@@ -8,7 +8,7 @@
   background-color: black;
 }
 .container div {
-  background-color: rgba(165, 165, 165, 0.8);
+  background-color: #ccbe44;
   box-shadow: 4px 4px 4px 4px rgb(137, 137, 137);
   border-radius: 15px;
   text-align: center;

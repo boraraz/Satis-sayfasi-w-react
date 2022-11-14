@@ -1,14 +1,21 @@
-import classes from "./SignIn.module.css";
+import classes from "./SignUp.module.css";
 //import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-function SignInItems() {
+function SignUpItems() {
   const navigate = useNavigate();
   //const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   return (
     <div className={classes.divHeight}>
       <form className={classes.signDiv}>
+        <label for="fullName">Name</label>
+        <input
+          type="text"
+          id="fullName"
+          name="fullName"
+          placeholder="Name..."
+        />
         <label for="username">Username</label>
         <input
           type="text"
@@ -16,7 +23,8 @@ function SignInItems() {
           name="username"
           placeholder="Username..."
         />
-
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Email..." />
         <label for="pass">Password</label>
         <input
           type="password"
@@ -24,15 +32,22 @@ function SignInItems() {
           name="password"
           placeholder="Password..."
         />
-        <button onClick={handleClick}>Log In</button>
+        <label for="passConf">Password (Confirmation)</label>
+        <input
+          type="password"
+          id="passConf"
+          name="passwordConfirmation"
+          placeholder="Password..."
+        />
+        <button onClick={handleClick}>Sign Up</button>
       </form>
     </div>
   );
 
   function handleClick() {
-    navigate("/");
+    navigate("/signUpBody");
     // in this handler there will be control if username and password correct or not.
   }
 }
 
-export default SignInItems;
+export default SignUpItems;
